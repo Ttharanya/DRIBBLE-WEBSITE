@@ -1,0 +1,521 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    display: block;
+    text-align: center;
+    background-color: white;
+    overflow: visible;
+}
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+    background-color: white;
+}
+
+/* Add space-between so that left items stay on left and Dribbble stays centered */
+.left-corner, .right-corner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.left-corner {
+    gap: 20px; /* Space between items */
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.right-corner {
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.dribbble-logo {
+    font-family: 'Dancing Script', cursive; /* Use font similar to Dribbble logo */
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    position: absolute; /* Center it in the middle of the nav */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Dropdown list for Find Designers */
+.dropdown-list {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    position: absolute;
+    display: none; /* Initially hidden */
+    top: 50px;
+    left: 20px;
+    width: 200px;
+    z-index: 10; 
+}
+
+.dropdown-item {
+    padding: 10px 0;
+    margin-bottom: 10px; /* Adds space between items */
+    cursor: pointer;
+}
+
+.dropdown-item:last-child {
+    margin-bottom: 0; /* No margin for the last item */
+}
+
+.dropdown-item p {
+    font-size: 12px;
+    color: black;
+    margin: 5px 0 0;
+}
+
+.dropdown-item strong {
+    font-size: 14px;
+    color: #333;
+}
+
+.dropdown-item:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+.search-bar {
+    padding: 10px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 20px; /* Rounded corners */
+    outline: none; /* Remove outline on focus */
+    transition: border-color 0.3s; /* Smooth transition */
+    margin-left: 10px; /* Push the search bar to the right */
+    width: 350px;
+    
+}
+
+.search-bar:focus {
+    border-color: black; /* Change border color on focus */
+}
+
+.login-button, .signup-button {
+    padding: 8px 16px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 20px; /* Rounded corners */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.login-button:hover, .signup-button:hover {
+    background-color: black; /* Darker green on hover */
+}
+
+
+
+
+.tagline {
+    font-size: 18px; /* Font size for the tagline */
+    color: #333; /* Text color */
+}
+
+.tagline-box {
+    text-align: center; /* Center the text */
+    background-color: violet; /* Background color for the box */
+    padding: 10px; /* Add some padding */
+    border-radius: 20px; /* Rounded corners */
+    margin: 20px auto; /* Center it horizontally and add margin */
+    width: fit-content; /* Adjust width to fit the content */
+}
+
+
+.info-title {
+    font-family: 'Dancing Script', cursive; /* Use the Dribbble logo font */
+    font-size: 60px; /* Increase font size for title */
+    font-weight: bold; /* Bold text */
+    color: #333; /* Text color */
+    margin: 20px 0; /* Margin for spacing */
+    
+    
+    
+}
+
+.info-description {
+    font-size: 18px; /* Font size for description */
+    color: black; /* Text color */
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+    padding:0;
+    display: block;
+}
+
+.info-box {
+    text-align: center; /* Center the text */
+    margin-top: 30px; /* Add margin-top for spacing */
+    padding-top: 30px;
+    width: 100%;
+
+}
+
+.container {
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: center;
+    overflow: visible;
+}
+
+/* Style for the Get Started button */
+.get-started-button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 12px ; /* Padding for the button */
+    border: none; /* Remove border */
+    border-radius: 20px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    font-weight: bold;
+    cursor: pointer; /* Change cursor to pointer */
+    margin-top: 10px; /* Spacing from the info description */
+    display: inline-block;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Hover effect for Get Started button */
+.get-started-button:hover {
+    background-color: #0b1a0c; /* Darker green on hover */
+}
+
+/* Ensure that the button is centered */
+.info-box {
+    text-align: center; /* Center the text and button */
+    margin-top: 30px;
+}
+
+/* Container for card section */
+.image-card-section {
+    display: flex;
+    overflow: hidden; /* Hide the extra cards that overflow */
+    white-space: nowrap; /* Prevent the cards from wrapping to the next line */
+    position: relative;
+    animation: scroll 30s linear infinite;
+}
+
+.card {
+    position: relative;
+    width: 273px;
+    margin: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.card img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 15px; /* Rounded corners */
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: white;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-content p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.tags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tags span {
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.explore-text {
+    font-family: 'Dancing Script', cursive; /* Use the Dribbble logo font */
+    font-size: 60px; /* Increase font size for title */
+    font-weight: bold; /* Bold text */
+    color: #333; /* Text color */
+    margin: 20px 0; /* Margin for spacing */
+    text-align: center;
+    
+}
+
+/* Container for the gallery */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr); /* Adjust column layout based on screen width */
+    gap: 20px; /* Spacing between the images */
+    padding: 20px;
+     /* Center images horizontally */
+}
+
+/* Individual gallery items */
+.gallery-item {
+    display: flex; /* Use flexbox to stack the image and text */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+    width: 100%; /* Set width to fill the column */
+    overflow: hidden;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px); /* Lift image on hover */
+}
+
+.gallery-item img {
+    width: 100%; /* Make image fill the container */
+    height: 100%; /* Make image fill the container */
+    object-fit: cover; 
+    border-radius: 15px;
+}
+
+/* Styling for the text below each image */
+.gallery-text {
+     margin-top: 10px; /* Space between image and text */
+    font-size: 16px;
+    color: #333;
+    margin-right: 100px;
+}
+
+/* Oval Button Styling */
+.button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.oval-button {
+    background-color: white;  /* White background */
+    color: black;  /* Black text */
+    border: 2px solid black;  /* Black border */
+    padding: 10px 30px;
+    font-size: 16px;
+    border-radius: 100px;  /* Oval shape */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    
+}
+
+.oval-button:hover {
+    background-color: black;  /* Black background on hover */
+    color: white;  /* White text on hover */
+}
+
+/* Yellow Box Styling */
+.yellow-box {
+    background-color: #FFDD00;  /* Yellow background */
+    padding: 40px 20px;
+    border: 2px solid #FFDD00;  /* Yellow border (invisible) */
+    text-align: center;
+    width: 100%;  /* Full width of the window */
+    margin-top: 60px;
+    height: 700px; /* Set a minimum height instead */
+    margin-bottom: 20px;
+    position: relative;
+    
+}
+
+/* Title Styling */
+.title {
+    font-family: 'Dancing Script', cursive; /* Use the Dribbble logo font */
+    font-size: 60px; /* Increase font size for title */
+    font-weight: bold; /* Bold text */
+    color: #333; /* Text color */
+    margin: 20px 0; /* Margin for spacing */
+    margin-top: 80px;
+}
+
+/* Description Styling */
+.description {
+    font-size: 20px;
+    color: black;  /* Black text */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Button Styling */
+.action-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;  /* Space between the buttons */
+}
+
+.action-button {
+    background-color: black;  /* White background */
+    color:white;  /* Black text */
+    border: 2px solid black;  /* Black border */
+    padding: 10px 30px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.action-button:hover {
+    background-color: black;  /* Black background on hover */
+    color: white;  /* White text on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.designer-question {
+    text-align: center; /* Center the text */
+    margin-top: 50px;   /* Add some space above the text */
+    font-size: 1.2em;   /* Adjust font size as needed */
+    color: #333;        /* Change color to match your theme */
+}
+
+.join-dribbble {
+    text-decoration: underline; /* Underline the text */
+    color: #007bff;            /* Change color to a link color (adjust as needed) */
+    cursor: pointer;           /* Change cursor to pointer on hover */
+}
+
+.join-dribbble:hover {
+    color: #0056b3;            /* Optional: Change color on hover */
+}
+
+.moving-images-container {
+    display: flex; /* Align images in a row */
+     /* Hide overflow for animation effect */
+    white-space: nowrap; /* Prevent images from wrapping */
+    position: relative; /* Set position for child elements */
+    width: 100%; /* Ensure full width */
+    height: 150px; /* Set a height for the container */
+}
+
+.image-container {
+    text-align: center; /* Center-align images and descriptions */
+    margin-right: 20px; /* Space between image containers */
+    margin-top: 50px;
+    margin-left: 30px;
+    cursor: pointer;
+    opacity: 1; /* Ensure full visibility */
+    
+}
+
+.moving-image {
+    width: 200px; /* Set the width of your images */
+    height: 150px;
+}
+
+.image-description {
+    margin-top: 5px; /* Space between image and description */
+    font-size: 14px; /* Font size for the description */
+    font-weight: bold;
+    color: #333; /* Color for the description text */
+}
+
+.text-container {
+    display: flex; /* Horizontal alignment of text */
+    /*justify-content: center;  Center align the entire container */
+    /*align-items: center; /* Vertically center the text */
+    margin-top: 10px; /* Space between images and text */
+    margin-left: 90px;
+    gap: 15px; /* Spacing between text items */
+    z-index: 1;
+}
+
+/* Styling for the 'Dribble' text */
+.text-container .dribble-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    color: black; /* Color for Dribble text */
+
+}
+
+/* Styling for the rest of the text */
+.text-container p {
+    margin: 20px; /* Remove default margins */
+    margin-top: 110px;
+    font-family: Arial, sans-serif; /* Default font for other texts */
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+ /* Make sure the text takes the available space */
+ .text-group {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping of text */
+    flex-grow: 1; /* Make text fill available space */
+    gap: 10px; /* Gap between text items */
+}
+
+/* Styling for social media icons */
+.social-icons a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 50%; /* Round shape */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 100px;
+    margin-right: 25px;
+    
+}
+
+.social-icons a.twitter { background-color: #1da1f2; } /* Twitter */
+.social-icons a.facebook { background-color: #1877f2; } /* Facebook */
+.social-icons a.instagram { background-color: #e4405f; } /* Instagram */
+.social-icons a.pinterest { background-color: #bd081c; } /* Pinterest */
+
+/* Add margin to the left of the first icon to separate it from text */
+.social-icons {
+    display: flex;
+    gap: 10px; /* Spacing between icons */
+}
+
+/* Keyframes for the sliding effect */
+@keyframes slide {
+    0% {
+        transform: translateX(100%); /* Start from right (off-screen) */
+    }
+    100% {
+        transform: translateX(-100%); /* Move left until fully off-screen */
+    }
+}

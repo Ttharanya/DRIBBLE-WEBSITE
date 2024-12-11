@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dribbble-like Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet"> <!-- Google Font similar to Dribbble -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <div class="left-corner">
+                <span id="find-designers">Find Designers &#9662;</span>
+                <span class="menu-item">Inspiration</span>
+                <span class="menu-item">Jobs</span>
+                <span class="menu-item">Go Pro</span>
+                <span class="dribbble-logo">Dribbble</span>
+            </div>
+            <div class="right-corner"> <!-- Added right corner for buttons -->
+                <input type="text" class="search-bar" placeholder="🔍 Search">
+                <button class="login-button">Login</button>
+                <button class="signup-button">Signup</button>
+            </div>
+        </div>
+
+        <div class="tagline-box">
+            <span class="tagline">Over 3 million ready-to-work creatives!</span>
+        </div>
+
+        <div class="info-box">
+            <span class="info-title">The world’s destination for design</span><br>
+            <span class="info-description">Get inspired by the work of millions of top-rated designers & agencies around the world.</span>
+            <button class="get-started-button">Get Started</button>
+        </div>
+
+
+        <!-- Dropdown list for Find Designers -->
+        <div class="dropdown-list" id="dropdown-list">
+            <div class="dropdown-item">
+                <strong>Designer search</strong>
+                <p>Quickly find your next designer</p>
+            </div>
+            <div class="dropdown-item">
+                <strong>Post a job</strong>
+                <p>The #1 job board for design talent</p>
+            </div>
+        </div>
+
+         <!-- Image card section -->
+         <div class="image-card-section" id="scrollContainer">
+            <div class="card">
+                <img src="Andrea Jelic.jpeg" alt="Jesse Showalter">
+                <div class="card-content">
+                    <h3>Andrea Jelic</h3>
+                    <p>Digital Designer</p>
+                    <div class="tags">
+                        <span>Brand</span>
+                        <span>UI</span>
+                        <span>Web</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat the card structure for additional images -->
+            <div class="card">
+                <img src="Aurelien Solomon.jpeg" alt="Aurelien Solomon">
+                <div class="card-content">
+                    <h3>Aurelien Solomon</h3>
+                    <p>Design Director</p>
+                    <div class="tags">
+                        <span>Mobile</span>
+                        <span>Product</span>
+                        <span>UX</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="chris owens.jpeg" alt="Aurelien Solomon">
+                <div class="card-content">
+                    <h3>chris owens</h3>
+                    <p>Creative Director</p>
+                    <div class="tags">
+                        <span>Mobile</span>
+                        <span>Illustration</span>
+                        <span>UI</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Dan Mall.jpeg" alt="Aurelien Solomon">
+                <div class="card-content">
+                    <h3>Dan Mall</h3>
+                    <p>Design Educator</p>
+                    <div class="tags">
+                        <span>product</span>
+                        <span>Ux</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="elif kamasoglue.png" alt="Aurelien Solomon">
+                <div class="card-content">
+                    <h3>elif kamasoglue</h3>
+                    <p>Brand Designer</p>
+                    <div class="tags">
+                        <span>Brand</span>
+                        <span>Illustration</span>
+                        <span>Web</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="helen Tran.jpeg" alt="Aurelien Solomon">
+                <div class="card-content">
+                    <h3>helen Tran</h3>
+                    <p>Lead Product Designer</p>
+                    <div class="tags">
+                        <span>Leadership</span>
+                        <span>Product</span>
+                        <span>UX</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="jesse Showalter.jpeg" alt="Aurelien Solomon">
+                <div class="card-content">
+                    <h3>jesse Showalter</h3>
+                    <p>Design Educator</p>
+                    <div class="tags">
+                        <span>Mobile</span>
+                        <span>Web</span>
+                        <span>UI</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Lilla Bardenova.jpeg" alt="Aurelien Solomon">
+                <div class="card-content">
+                    <h3>Lilla Bardenova</h3>
+                    <p>Brand+Illustrator</p>
+                    <div class="tags">
+                        <span>Brand</span>
+                        <span>Web</span>
+                        <span>Illustration</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Mercedes Bazan.jpeg" alt="Aurelien Solomon">
+                <div class="card-content">
+                    <h3>Mercedes Bazan</h3>
+                    <p>Illustrator</p>
+                    <div class="tags">
+                        <span>Graphic Design</span>
+                        <span>Illustration</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="vladimir gruel.png" alt="Aurelien Solomon">
+                <div class="card-content">
+                    <h3>vladimir gruel</h3>
+                    <p>Digital Designer</p>
+                    <div class="tags">
+                        <span>Design</span>
+                        <span>Brand</span>
+                        <span>UX</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more cards here -->
+        </div>
+    </div>
+    
+<div class="explore-text">Explore Inspiring Designs</div>
+
+<div class="gallery-container">
+    <div class="gallery-item">
+        <img src="Muti.jpg" alt="Image 1">
+        <div class="gallery-text">MUTI</div>
+        
+    </div>
+    <div class="gallery-item">
+        <img src="Geeks arts.png" alt="Image 2">
+        <div class="gallery-text">Geex Arts</div>
+    </div>
+    <div class="gallery-item">
+        <img src="sava stoic.png" alt="Image 3">
+        <div class="gallery-text">Sava Stoic</div>
+    </div>
+    <div class="gallery-item">
+        <img src="type08(alen pavlovic).jpg" alt="Image 4">
+        <div class="gallery-text">Type08(Alen Pavlovic)</div>
+    </div>
+    <div class="gallery-item">
+        <img src="josh waren.png" alt="Image 4">
+        <div class="gallery-text">Josh Warren</div>
+    </div>
+    <div class="gallery-item">
+        <img src="jeroen.jpg" alt="Image 4">
+        <div class="gallery-text">Jeroen van Eerden</div>
+    </div>
+    <div class="gallery-item">
+        <img src="gregory.png" alt="Image 4">
+        <div class="gallery-text">Gregory Grigoriou</div>
+    </div>
+    <div class="gallery-item">
+        <img src="skinny ships.png" alt="Image 4">
+        <div class="gallery-text">skinny ships</div>
+    </div>
+    <div class="gallery-item">
+        <img src="deividas.png" alt="Image 4">
+        <div class="gallery-text">Deividas Bielskis</div>
+    </div>
+    <div class="gallery-item">
+        <img src="dimitrijie.jpg" alt="Image 4">
+        <div class="gallery-text">Dimitrije Mikovic</div>
+    </div>
+    <div class="gallery-item">
+        <img src="bohdan.png" alt="Image 4">
+        <div class="gallery-text">Bohdan Harbaruk</div>
+    </div>
+    <div class="gallery-item">
+        <img src="extej.jpg" alt="Image 4">
+        <div class="gallery-text">Extej UI UX Design Agency</div>
+    </div>
+    <div class="gallery-item">
+        <img src="jordan.jpg" alt="Image 4">
+        <div class="gallery-text">Jordan Hughes</div>
+    </div>
+    <div class="gallery-item">
+        <img src="daniel.png" alt="Image 4">
+        <div class="gallery-text">Daniel Bodea / Kreatank</div>
+    </div>
+    <div class="gallery-item">
+        <img src="matt erickson.png" alt="Image 4">
+        <div class="gallery-text">Matt Erickson</div>
+    </div>
+    <div class="gallery-item">
+        <img src="focus lab.png" alt="Image 4">
+        <div class="gallery-text">Focus Lab + Odi</div>
+    </div>
+    <div class="gallery-item">
+        <img src="breno.png" alt="Image 4">
+        <div class="gallery-text">Breno Bitencourt</div>
+    </div>
+    <div class="gallery-item">
+        <img src="slavisa.png" alt="Image 4">
+        <div class="gallery-text">Slavisa Dujkovic|logo</div>
+    </div>
+    <div class="gallery-item">
+        <img src="tubik.png" alt="Image 4">
+        <div class="gallery-text">tubik</div>
+    </div>
+    <div class="gallery-item">
+        <img src="aron.png" alt="Image 4">
+        <div class="gallery-text">Aron leah</div>
+    </div>
+    <div class="gallery-item">
+        <img src="kragujevac.png" alt="Image 4">
+        <div class="gallery-text">Aleksandar Savić/Almigor</div>
+    </div>
+    <div class="gallery-item">
+        <img src="aron1.png" alt="Image 4">
+        <div class="gallery-text">Aron leah</div>
+    </div>
+    <div class="gallery-item">
+        <img src="nixtio.png" alt="Image 4">
+        <div class="gallery-text">Nixtio</div>
+    </div>
+    <div class="gallery-item">
+        <img src="isaac.jpg" alt="Image 4">
+        <div class="gallery-text">Isaac LeFever</div>
+    </div>
+    
+    <!-- Add more gallery items here -->
+</div>
+<div class="button-container">
+    <button class="oval-button">Browse More Inspiration</button>
+</div>
+
+<div class="yellow-box">
+    <h1 class="title">Find Your Next Designer</h1>
+    <div class="description">
+        <span>The world's leading brands use Dribbble to hire creative talent.</span><br>
+        <span>Browse millions of top-rated portfolios to find your perfect creative match.</span>
+    </div>
+    
+    <div class="action-button-container">
+        <button class="action-button">Get Started Now</button>
+        <button class="action-button">Learn About Hiring</button>
+    </div>
+    <p class="designer-question">Are you a designer? <a href="https://dribbble.com/" class="join-dribbble">Join Dribbble</a></p>
+</div>
+
+<!-- Moving Images Section -->
+<div class="moving-images-container" id="moving-images-container">
+    <div class="image-container">
+        <img src="print.webp" alt="Description for Image 1" class="moving-image">
+        <div class="image-description">print</div>
+    </div>
+    <div class="image-container">
+        <img src="product design.webp" alt="Description for Image 2" class="moving-image">
+        <div class="image-description">product Design</div>
+    </div>
+    <div class="image-container">
+        <img src="typography.webp" alt="Description for Image 3" class="moving-image">
+        <div class="image-description">Typography</div>
+    </div>
+    <div class="image-container">
+        <img src="animation.webp" alt="Description for Image 3" class="moving-image">
+        <div class="image-description">Animation</div>
+    </div>
+    <div class="image-container">
+        <img src="branding.webp" alt="Description for Image 3" class="moving-image">
+        <div class="image-description">Branding</div>
+    </div>
+    <div class="image-container">
+        <img src="illustration.webp" alt="Description for Image 3" class="moving-image">
+        <div class="image-description">Illustration</div>
+    </div>
+    <div class="image-container">
+        <img src="mobile.webp" alt="Description for Image 3" class="moving-image">
+        <div class="image-description">Mobile</div>
+    </div>
+    <div class="image-container">
+        <img src="web design.webp" alt="Description for Image 3" class="moving-image">
+        <div class="image-description">Web Design</div>
+    </div>
+</div>
+
+<div class="text-container">
+    <p class="dribble-text">Dribble</p>
+    <div class="text-group">
+        <p>For designers</p>
+        <p>Hire talent</p>
+        <p>Inspiration</p>
+        <p>Advertising</p>
+        <p>Blog</p>
+        <p>About</p>
+        <p>Careers</p>
+        <p>Support</p>
+    </div>
+
+    <!-- Social media icons -->
+     <div class="social-icons">
+        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="pinterest"><i class="fab fa-pinterest-p"></i></a>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
